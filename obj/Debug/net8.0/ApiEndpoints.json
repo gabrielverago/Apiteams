@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "WebhookController",
+    "Method": "VerifyWebhook",
+    "RelativePath": "webhooks/agiloft",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebhookController",
+    "Method": "HandleWebhook",
+    "RelativePath": "webhooks/agiloft",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chamado",
+        "Type": "SaCasePayload",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
