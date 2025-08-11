@@ -35,8 +35,9 @@ public class WebhookController : ControllerBase
         // Envia para o Teams
         var mensagem = new
         {
-            text = $"📢 Novo chamado criado:\n\n" +
-                   $"**ID:** {chamado.Id}\n" 
+            text = $"📢 Novo chamado criado ou editado:\n\n" +
+                   $"**ID:** {chamado.Id}\n",
+            V = $"**Titulo:** {chamado.Summary}\n"
 
         };
 

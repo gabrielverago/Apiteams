@@ -55,6 +55,10 @@
           "id": {
             "type": "integer",
             "format": "int32"
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
