@@ -1,0 +1,2 @@
+[deploy]
+startCommand = "dotnet run --project ./WebApplication1/WebApplication1.csproj"

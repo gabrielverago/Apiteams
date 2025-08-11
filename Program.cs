@@ -6,6 +6,17 @@ namespace WebApplication1
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            if (builder.Environment.IsProduction())
+            {
+                var portVar = Environment.GetEnvironmentVariable("PORT");
+                if (!string.IsNullOrEmpty(portVar) && int.TryParse(portVar, out var port))
+                {
+                    builder.WebHost.ConfigureKestrel(options =>
+                    {
+                        options.ListenAnyIP(port);
+                    });
+                }
+            }
 
             // Add services to the container.
 
@@ -37,9 +48,7 @@ namespace WebApplication1
                 app.UseSwaggerUI();
             }
 
-            
 
-            
 
 
             app.MapControllers();
