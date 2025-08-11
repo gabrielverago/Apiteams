@@ -1,2 +1,6 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "./Dockerfile"
+
 [deploy]
-startCommand = "dotnet run --project ./WebApplication1/WebApplication1.csproj"
+startCommand = "dotnet WebApplication1.dll"
