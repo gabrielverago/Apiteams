@@ -36,8 +36,8 @@ public class WebhookController : ControllerBase
         var mensagem = new
         {
             text = $"📢 Novo chamado criado ou editado:\n\n" +
-                   $"**ID:** {chamado.Id}\n",
-            V = $"**Titulo:** {chamado.Summary}\n"
+                   $"**ID:** {chamado.Id}\n"+
+                   $"**Título:** {chamado.Summary}\n"
 
         };
 
